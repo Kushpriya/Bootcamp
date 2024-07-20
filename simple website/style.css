@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navigation {
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.nav-list a:hover {
+    /* text-decoration: underline; */
+    border-radius: 5px;
+    color:green;
+    
+}
+
+
+.home {
+    height: 500px;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+    color: white;
+    font-size: 50px;
+}
+
+.home span {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 1s forwards;
+}
+
+.home span:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.home span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.home span:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    display: none;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.form-container.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2eb435;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    margin: 20px 300px;
+    width: 70%;
+    gap: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 80px;
+}
+
+.hero .img{
+    width: 40%;
+    height: 400px;
+    padding: 10px;
+  border-radius: 40px;
+}
+
+.hero h1{
+    margin: 20px;
+    font-size: 50px;
+    color:rgb(98, 31, 161);
+
+}
+
+.hero p{
+    font-size: 20px;
+    width: 90%;
+}
+
+ .services h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(98, 31, 161);
+    margin-top: 60px;
+   
+}
+
+.services .service {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:1fr 1fr 1fr;
+    width: 1000px;
+    margin-left: 250px;
+    gap: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.services .service .section {
+    align-items: center;
+    justify-content:center;
+    position: relative;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 25px;
+    width: 250px;
+    height: 120px;
+    /* border:1px solid #2eb435; */
+    
+}
+.services .service .section p{
+    color: rgb(81, 73, 73);
+    font-size: 15px;
+    margin: 10px 0px;
+
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color:rgb(248, 247, 247); */
+    margin-top: 50px;
+    padding: 20px;
+    
+}
+
+.contact .form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+
+}
+
+.contact .form-section h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    color:rgb(98, 31, 161);
+    margin-bottom: 20px;
+}
+
+.contact .form-section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: rgb(233, 238, 233);
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #949393;
+}
