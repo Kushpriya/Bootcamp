@@ -93,9 +93,15 @@ nav a.active {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color:aliceblue;
 }
 
+.form-container h2{
+    display: flex;
+    color:rgb(98, 31, 161);
+    align-items: center;
+    justify-content: center;
+}
 .form-container.active {
     display: block;
 }
@@ -121,12 +127,13 @@ button {
     background-color: #2eb435;
     color: white;
     border: none;
+    font-size: 20px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #575757;
+    background-color:darkgreen;
 }
 
 .hero{
@@ -251,4 +258,5 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #949393;
+    border-top: 1px solid #060606;
 }

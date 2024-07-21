@@ -20,8 +20,8 @@
                 <a href="#about">About</a>
                 <a href="#service">Services</a>
                 <a href="#contact">Contact</a>
-                <a href="login">Login</a>
-                <a href="signup">Sign Up</a>
+                <a href="#login" id="login-link">Login</a>
+                <a href="#signup" id="signup-link">Sign Up</a>
         </nav>
     </header>
 
@@ -34,7 +34,7 @@
         <!-- <h2>Team Work Makes The Dream Work!</h2> -->
     </section>
 
-        <div class="form-container" id="login">
+        <section class="form-container" id="login">
             <h2>Login</h2>
             <form action="#">
                 <label>Username:</label>
@@ -43,9 +43,9 @@
                 <input type="password">
                 <button type="submit">Login</button>
             </form>
-        </div>
+        </section>
 
-        <div class="form-container" id="signup">
+        <section class="form-container" id="signup">
             <h2>Sign Up</h2>
             <form action="#">
                 <label>Username:</label>
@@ -61,8 +61,7 @@
                 <input type="password" placeholder="Enter Your Password">
                 <button type="submit">Sign Up</button>
             </form>
-        </div>
-
+        </section>
 
     <section class="hero" id="about">
         <!-- <img src="./images/img1.jpg" alt="Image 1">
@@ -130,7 +129,7 @@
                 <div class="textarea-field">
                     <textarea id="feedback" cols="40" rows="5" placeholder="Your Message" required></textarea>
                 </div>
-                <button onclick="login()">Submit</button>
+                <button onclick="submit()">Submit</button>
             </div>
         </form>
     </section>
