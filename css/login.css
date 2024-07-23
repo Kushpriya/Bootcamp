@@ -12,7 +12,7 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 300px;
 }
 
@@ -27,9 +27,10 @@ label {
 }
 
 .input-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
 }
 
 .input-container i {
@@ -79,4 +80,19 @@ p a:hover {
   font-size: 12px;
   margin-top: -10px;
   margin-bottom: 10px;
+}
+
+
+.input-container .fa-eye {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #888;
+} 
+
+.input-container .fa-eye-slash {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #888;
 }

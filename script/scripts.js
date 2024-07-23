@@ -26,7 +26,7 @@ function login() {
   var d = document.getElementById("phone").value.trim();
   var e = document.getElementById("feedback").value.trim();
 
-  var regx_a = /^[A-Z a-z.]+$/;
+  var regx_a = /^[A-Z a-z.]$/;
   var regx_b = /^[A-Z a-z0-9\s,.'-]{3,}$/;
   var regx_c = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   var regx_d = /^[789][0-9]{9}$/;
