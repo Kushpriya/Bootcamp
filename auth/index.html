@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="../images/logo.jpg" alt="Logo Image" class="logo" />
+      </div>
+
+      <nav>
+        <a href="../auth/index.html" id="homelink" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="../auth/login.html" id="loginlink">Login</a>
+        <a href="../auth/signup.html" id="signuplink">Sign Up</a>
+        <a href="#" id="logoutlink" style="display: none;">Logout</a>
+      </nav>
+    </header>
+
+    <section class="home-section" id="home">
+      <h1>
+        <span>Welcome</span>
+        <span>To</span>
+        <span>FleetPanda!</span>
+      </h1>
+      <!-- <h2>Team Work Makes The Dream Work!</h2> -->
+    </section>
+
+    <section class="hero" id="about">
+      <!-- <img src="./images/img1.jpg" alt="Image 1">
+        <img src="./images/img2.jpg" alt="Image 2"> -->
+      <img src="../images/about.jpg" alt="Image 3" class="img" />
+      <div>
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+          voluptatem maxime saepe eum blanditiis dolores magni deserunt hic quos
+          tempora assumenda natus, temporibus esse cum ab asperiores! Optio,
+          repudiandae enim.
+        </p>
+      </div>
+    </section>
+
+    <section class="services" id="service">
+      <h2>Our Services</h2>
+      <div class="serve">
+        <div class="section">
+          <h4>Web Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            perferendis totam! Nulla quas alias veritatis possimus.
+          </p>
+        </div>
+        <div class="section">
+          <h4>Web Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            perferendis totam! Nulla quas alias veritatis possimus.
+          </p>
+        </div>
+        <div class="section">
+          <h4>Video Editing</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            perferendis totam! Nulla quas alias veritatis possimus.
+          </p>
+        </div>
+        <div class="section">
+          <h4>IT consultancy</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            perferendis totam! Nulla quas alias veritatis possimus.
+          </p>
+        </div>
+
+        <div class="section">
+          <h4>Digital Marketing</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            perferendis totam! Nulla quas alias veritatis possimus.
+          </p>
+        </div>
+
+        <div class="section">
+          <h4>Graphic Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
+            perferendis totam! Nulla quas alias veritatis possimus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us" id="contact">
+      <form action="index.html" onsubmit="return login()">
+        <div class="form-section">
+          <h1>Contact Us</h1>
+          <div>
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your Name"
+              required
+            />
+            <span id="nameerror" class="text-danger font-weight-bold"></span>
+          </div>
+          <div>
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              placeholder="Enter your Address"
+              required
+            />
+            <span id="addresserror" class="text-danger font-weight-bold"></span>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+            <span id="emailerror" class="text-danger font-weight-bold"></span>
+          </div>
+          <div>
+            <label for="phone">Contact Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your Phone No."
+              required
+            />
+            <span id="numerror" class="text-danger font-weight-bold"></span>
+          </div>
+          <div class="textarea-field">
+            <textarea
+              id="feedback"
+              cols="40"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <!-- <hr> -->
+      <p>Copyright © 2024 Priya Kushawaha. All Rights Reserved.</p>
+    </footer>
+    <script src="../script/scripts.js"></script>
+  </body>
+</html>

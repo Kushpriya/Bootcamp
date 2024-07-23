@@ -45,7 +45,7 @@ nav a.active {
 
 .home-section {
     height: 600px;
-    background-image: url(./images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -86,55 +86,6 @@ nav a.active {
     }
 }
 
-.form-container {
-    display: none;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color:aliceblue;
-}
-
-.form-container h2{
-    display: flex;
-    color:rgb(98, 31, 161);
-    align-items: center;
-    justify-content: center;
-}
-.form-container.active {
-    display: block;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input {
-    margin-bottom: 15px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px;
-    background-color: #2eb435;
-    color: white;
-    border: none;
-    font-size: 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color:darkgreen;
-}
 
 .hero{
     display: flex;
@@ -252,6 +203,12 @@ button:hover {
     height: 50px;
     border-radius: 10px;
     margin-left: 100px;
+}
+
+.contact-us .form-section .text-danger{
+    color: red;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
