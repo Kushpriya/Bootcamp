@@ -1,5 +1,4 @@
 function validateLogin() {
-    // event.preventDefault(); 
   var username = document.getElementById("username").value.trim();
   var password = document.getElementById("password").value.trim();
 
@@ -21,6 +20,7 @@ function validateLogin() {
     document.getElementById("passwordError").innerHTML = "Password is invalid";
     isValid = false;
   }
+  // alert("login");
   return isValid;
 }
 
@@ -34,15 +34,15 @@ function handleLogin(event) {
   
       if (username === "user" && password === "Pass@123") {
         localStorage.setItem("loggedIn", "true");
-        window.location.href = "../app/index.html";
+        window.location.href = "../app/posts.html";
+        // window.location.href = "../index.html";
+
       } else {
         alert("Invalid credentials");
       }
     }
   }
 
-
-  
 function Visibility(passwordFieldId, toggleIconId) {
     var passwordField = document.getElementById(passwordFieldId);
     var toggleIcon = document.getElementById(toggleIconId);
@@ -57,3 +57,5 @@ function Visibility(passwordFieldId, toggleIconId) {
         toggleIcon.classList.add("fa-eye-slash");
     }
 }
+
+// document.getElementById("loginForm").addEventListener("submit", handleLogin);
