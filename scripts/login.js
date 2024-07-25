@@ -1,9 +1,13 @@
-function validateLogin() {
+import { request } from "./resquest.js";
+
+function validateLogin(event) {
+  event.preventDefault();
+
   var username = document.getElementById("username").value.trim();
-  var password = document.getElementById("password").value.trim();
+  var email = document.getElementById("email").value.trim();
 
   var regxUsername = /^[A-Za-z0-9._-]{3,20}$/;
-  var regxPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+  var regxEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
   var isValid = true;
 
@@ -14,48 +18,32 @@ function validateLogin() {
     isValid = false;
   }
 
-  if (regxPassword.test(password)) {
-    document.getElementById("passwordError").innerHTML = "";
+  if (regxEmail.test(email)) {
+    document.getElementById("emailError").innerHTML = "";
   } else {
-    document.getElementById("passwordError").innerHTML = "Password is invalid";
+    document.getElementById("emailError").innerHTML = "Email is invalid";
     isValid = false;
   }
-  // alert("login");
-  return isValid;
-}
 
-
-function handleLogin(event) {
-    event.preventDefault();
-  
-    if (validateLogin()) {
-      var username = document.getElementById("username").value.trim();
-      var password = document.getElementById("password").value.trim();
-  
-      if (username === "user" && password === "Pass@123") {
-        localStorage.setItem("loggedIn", "true");
-        window.location.href = "../app/posts.html";
-        // window.location.href = "../index.html";
-
-      } else {
-        alert("Invalid credentials");
-      }
-    }
+  if (isValid) {
+    handleLogin(username, email);
   }
-
-function Visibility(passwordFieldId, toggleIconId) {
-    var passwordField = document.getElementById(passwordFieldId);
-    var toggleIcon = document.getElementById(toggleIconId);
-
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        toggleIcon.classList.remove("fa-eye-slash");
-        toggleIcon.classList.add("fa-eye");
-    } else {
-        passwordField.type = "password";
-        toggleIcon.classList.remove("fa-eye");
-        toggleIcon.classList.add("fa-eye-slash");
-    }
 }
 
-// document.getElementById("loginForm").addEventListener("submit", handleLogin);
+function handleLogin(username, email) {
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((users) => {
+      const user = users.find(
+        (user) => user.username === username && user.email === email
+      );
+
+      if (user) {
+        alert("Login successful!");
+        window.location = "../app/posts.html";
+      } else {
+        alert("Incorrect Username or Email");
+      }
+    })
+    .catch((error) => console.log(error));
+}
