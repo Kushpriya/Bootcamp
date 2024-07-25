@@ -3,7 +3,7 @@ import {serialize} from './serialize.js';
 export function request(url, method = "GET", data = {}) {
     switch (method) {
         case "GET":
-            return request("GET","https://jsonplaceholder.typicode.com/users");
+            return handleGetRequest(url);
 
         case "POST":
             return handlePostRequest(url, data);
