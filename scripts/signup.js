@@ -1,3 +1,4 @@
+import { request } from "./request.js";
 function validateSignup() {
     var username = document.getElementById("username").value.trim();
     var email = document.getElementById("email").value.trim();
@@ -38,8 +39,23 @@ function validateSignup() {
         isValid = false;
     }
 
-    return isValid;
+    if(isValid){
+        const formData = {
+            username,
+            email,
+            password,
+        };
+
+        console.log(formData);
+        request('https://jsonplaceholder.typicode.com/users','POST',formData)
+        .then((data)=>{
+            localStorage.setItem("username",data.username);
+            alert("New account created");
+        }).then((error) => console.log(error));
+
+    }
 }
+document.getElementById("form").addEventListener("submit",validateSignup);
 
 function Visibility(passwordFieldId, toggleIconId) {
     var passwordField = document.getElementById(passwordFieldId);
@@ -55,3 +71,5 @@ function Visibility(passwordFieldId, toggleIconId) {
         toggleIcon.classList.add("fa-eye-slash");
     }
 }
+
+window.Visibility=Visibility;

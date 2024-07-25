@@ -41,7 +41,9 @@ async function handleGetRequest(url,data) {
         headers: {
             'Content-Type': 'application/json'
         } 
-    }).then(res => res.json());
+    });
+    const result = await res.json();
+
         response["success"] = true;
         response["data"] = serialize(result);
     } catch (err) {
