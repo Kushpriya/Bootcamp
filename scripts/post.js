@@ -1,3 +1,5 @@
+// import { request } from "./request.js";
+
 fetch('../app/navbar.html')
 .then(response => response.text())
 .then(data => {
